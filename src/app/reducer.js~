@@ -1,0 +1,18 @@
+import { createAction, handleAction } from 'redux-actions';
+import { combineReducers } from 'redux';
+
+const loginDefaultState = {
+    loggedIn: false
+}
+
+const login = createAction('LOGIN');
+const loginReducer = handleAction(
+    login,
+    (state, action) => ({
+	    ...state,
+	loggedIn: true
+    }),
+    loginDefaultState
+);
+
+export default combineReducers(loginReducer);

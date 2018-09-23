@@ -1,0 +1,9 @@
+runtime: nodejs8
+
+handlers:
+- url: /*
+  secure: always
+  redirect_http_response_code: 301
+  script: auto
+  http_headers:
+    Access-Control-Allow-Origin: *
