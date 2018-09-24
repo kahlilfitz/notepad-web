@@ -88,6 +88,7 @@ export const Notepad = props => {
 
 	setNoteTitle( noteForLoad.title );
 	setNoteContent( noteForLoad.content );
+	noteSaved( noteForLoad );
     }
     
     const saveNote = async () => {
