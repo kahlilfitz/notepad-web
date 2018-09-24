@@ -2,7 +2,9 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 
 export const Login = props => {
-    const {onLogin, onRegister} = props;
+    const { onLogin, onRegister, isLoggedIn } = props;
+
+    if ( isLoggedIn ) { return null };
     
     return (
 	<form>
@@ -29,10 +31,10 @@ export const Login = props => {
 	    </div>
 	    </div>
 	    <div>
-	    <button type="button" onClick={onLogin}>
+	    <button type="button" onClick={ onLogin }>
 	    Login
 	</button>
-	    <button type="button" onClick={onRegister}>
+	    <button type="button" onClick={ onRegister }>
 	    Register
 	</button>
 	    </div>
